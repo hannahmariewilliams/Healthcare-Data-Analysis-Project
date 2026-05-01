@@ -12,7 +12,7 @@ E: Explanation/thought process
 ### **Patient & Operations**
 Q: What were the peak admission days by Month?
 
-```
+```sql
         SELECT 
         EXTRACT(MONTH FROM treatment_date),
         treatment_date,
