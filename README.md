@@ -5,9 +5,9 @@ Tools used in this project: SQL, PGAdmin PostgreSQL
 
 Using the Hospital Management Dataset from Kaggle, I set out to explore any relevant insights within the hospital. In addition, the use of Chatgpt was used to help create pertinent business questions. 
 
-Q: Question
-A: Answer
-E: Explanation/thought process
+Q: Question  
+A: Answer  
+E: Explanation/thought process  
 
 ### **Patient & Operations**
 Q: What were the peak admission days by Month?
