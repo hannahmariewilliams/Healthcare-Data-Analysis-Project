@@ -1,7 +1,6 @@
 # Data-Analysis-Project-Hospital-Management-Dataset
-Data Analysis Project using Hospital Managemnt Dataset
+Data Analysis Project using [Hospital Managemnt Dataset](https://www.kaggle.com/datasets/kanakbaghel/hospital-management-dataset)
 
-Link to dataset: https://www.kaggle.com/datasets/kanakbaghel/hospital-management-dataset
 Tools used in this project: SQL, PGAdmin PostgreSQL
 
 Using the Hospital Management Dataset from Kaggle, I set out to explore any relevant insights within the hospital. In addition, the use of Chatgpt was used to help create pertinent business questions. 
