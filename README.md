@@ -25,3 +25,14 @@ A: April was the month with the most admissions our of 2023. Having a total of 2
 E: I wanted to first COUNT total appointmnets and by using a window function, I was able to create a "window" per month by use of partition by. Then I used "ORDER BY" to sort by the Months with the most appointments first.  
 
 Q: What were the peak admission days by Day?  
+
+```sql
+        SELECT 
+        TO_CHAR(treatment_date, 'Day'),
+        treatment_date,
+        COUNT(appointment_id) OVER(PARTITION BY TO_CHAR(treatment_date, 'Day')) totalappointments
+        FROM treatments
+        ORDER BY totalappointments DESC
+```
+A: Tuesday and Wednesday were tied with a total of 37 appointments each Followed by Thursday with 28.  
+E: I did the same process as the above, however I wanted to find peak admissions for the day of the week and added "TO _CHAR"
