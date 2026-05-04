@@ -11,3 +11,22 @@ SELECT
 COUNT(*) total_appointments
 FROM appointments
 ```
+200 Total appointments across the dataset  
+
+### Total Appointments by Status
+```sql
+SELECT 
+COUNT(*),
+Status
+FROM appointments
+GROUP BY status
+```
+
+
+### No Show Rate
+```sql
+SELECT 
+	ROUND(COUNT(CASE WHEN status = 'No-show' THEN 1 END) * 1.0 / COUNT(*), 2) no_show_rate
+FROM appointments
+```
+For this, first I used a case statement to only account for no show appointments by assigning them to "1". Then I used COUNT() funciton to count them up. I multiplied by 1.0 as PostgreSQL will round up to the nearest integer if it's not considered numeric (able to handle decimals). After this, I divide by the total appointments which gives us the No-Show rate. I also used the ROUND() function to give us a clean **0.26 or 26% No-show rate** accross all appointmnets.
