@@ -5,3 +5,9 @@ Datas source: [Hospital Managemnt Dataset](https://www.kaggle.com/datasets/kanak
 
 Tools used: SQL (PostgreSQL)
 
+### Total Appointments
+```sql
+SELECT 
+        COUNT(*) total_appointments
+		FROM appointments
+```
