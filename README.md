@@ -11,7 +11,7 @@ SELECT
 COUNT(*) total_appointments
 FROM appointments
 ```
-200 Total appointments across the dataset  
+200 Total appointments
 
 ### Total Appointments by Status
 ```sql
@@ -29,7 +29,7 @@ SELECT
 	ROUND(COUNT(CASE WHEN status = 'No-show' THEN 1 END) * 1.0 / COUNT(*), 2) no_show_rate
 FROM appointments
 ```
-For this, first I used a case statement to only account for no show appointments by assigning them to "1". Then I used COUNT() funciton to count them up. I multiplied by 1.0 as PostgreSQL will round up to the nearest integer if it's not considered numeric (able to handle decimals). After this, I divide by the total appointments which gives us the No-Show rate. I also used the ROUND() function to give us a clean **0.26 or 26% No-show rate** accross all appointmnets.
+For this, first I used a case statement to only account for No-show appointments by assigning them to "1". Then I used COUNT() funciton to count them up. I multiplied by 1.0 as PostgreSQL will round up to the nearest integer if it's not considered numeric (able to handle decimals). After this, I divided by the total appointments which gives us the No-Show rate. I also used the ROUND() function to give us a clean **0.26 or 26% No-show rate** accross all appointmnets.
 
 ###Total Revenue
 ```sql
@@ -38,4 +38,4 @@ SUM(amount)
 FROM billing
 WHERE payment_status = 'Paid'
 ```
-In this case I used the SUM() function to add together all of the payments to the hospital and filtered it by "Paid" as there are also "Failed" and "Pending" payments. **Total revenue is $173424.90**
+In this case, I used the SUM() function to add together all of the payments to the hospital and filtered it by "Paid" as there are also "Failed" and "Pending" payments. **Total revenue is $173,424.90**
