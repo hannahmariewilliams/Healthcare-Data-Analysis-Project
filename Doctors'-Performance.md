@@ -1,4 +1,4 @@
-# Doctor's Performance
+# Doctors' Performance
 
 ### Patients per Doctor
 ```sql
