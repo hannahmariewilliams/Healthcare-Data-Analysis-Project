@@ -15,7 +15,7 @@ Result:
 <img width="260" height="260" alt="image" src="https://github.com/user-attachments/assets/94833627-ab88-4e48-90e5-4aa6e3ffeaa4" />
 
 
-In this case I wanted to find which patients had come for at least two appointments (COUNT). To begin I counted all appointments and 
+In this case, I wanted to find which patients had come for at least two appointments (COUNT). To begin I counted all appointments and 
 grouped by patient. I filtered by completed status (WHERE) and the total appointments per patient must be more than 1 (HAVING).
 
 ```sql
@@ -32,6 +32,7 @@ ORDER BY total_appointments DESC
 ) appointmentsrepeatperpatient
 ```
 Result: **12 repeat patients**  
+
 I just added a subquery and counted all of the patients who had **more** than one completed appointment (COUNT(*) > 1.
 
 ```sql
@@ -46,6 +47,7 @@ WHERE status = 'Completed'
 GROUP BY patient_id) totalpatientswithcompletedappointment
 ```
 Result: **33 patients who had at least one completed appointment**  
+
 COUNT of all patients with at least one completed appointment.
 
 ### Revisit Rate
@@ -66,3 +68,16 @@ FROM patient_visits;
 Result: **36.36% revisit rate**
 
 In this case, I created a CTE table to inlcude a table with the results of total completed appointments per patient. Selecting out of the CTE table, using a CASE statement, I counted up all of the patients who had more than one completed appointment (SUM) and divided by all patients who had at least one completed appointment. I multipled the reult, rounded and concatenated the result to shoe 36.36%.
+
+### Most Common Reason for Visit
+```sql
+SELECT COUNT(*),
+reason_for_visit
+FROM appointments
+WHERE status = 'Completed' OR status = 'Scheduled'
+GROUP BY reason_for_visit
+ORDER BY COUNT(*) DESC
+```
+Result: Getting a check up is the most the common reason for making an appointment.
+
+I counted all appointments and filtered by completed or scheduled only and grouped by the reason for visit. Lastly I wanted to display the most common reason for visit first so I used order by descending,
