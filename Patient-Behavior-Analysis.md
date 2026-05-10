@@ -63,6 +63,6 @@ SELECT
 FROM patient_visits;
 ```
 
-Result: **36.36% revisit rate%**
+Result: **36.36% revisit rate**
 
 In this case, I created a CTE table to inlcude a table with the results of total completed appointments per patient. Selecting out of the CTE table, using a CASE statement, I counted up all of the patients who had more than one completed appointment (SUM) and divided by all patients who had at least one completed appointment. I multipled the reult, rounded and concatenated the result to shoe 36.36%.
