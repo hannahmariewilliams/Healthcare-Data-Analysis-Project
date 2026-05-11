@@ -1,4 +1,5 @@
 # Financial Analysis
+!!!!!!!!!!!! UPDATE TO ONLY INCLUDE PAID TREATMENTS
 
 ### Total Revenue by Treatment Type
 ```sql
