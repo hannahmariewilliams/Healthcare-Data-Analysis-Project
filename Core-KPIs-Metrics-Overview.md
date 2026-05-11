@@ -51,3 +51,6 @@ GROUP BY payment_status
 Result: **64 payments for a total of $173,424.90, 67 failed payments totaling $193,212.94 and 69 pending payments for a total of $184,612.01**
 
  I used COUNT() of total payments grouped by status and SUM() also grouped by status which provided total revenue.
+
+### Full Billing and Treatment View
+```sql
