@@ -54,3 +54,21 @@ Result: **64 payments for a total of $173,424.90, 67 failed payments totaling $1
 
 ### Full Billing and Treatment View
 ```sql
+SELECT
+p.patient_id,
+p.first_name,
+p.last_name,
+b.amount,
+b.payment_status,
+t.treatment_type
+FROM patients p
+FULL JOIN billing b
+ON p.patient_id = b.patient_id
+FULL JOIN treatments t
+ON b.treatment_id = t.treatment_id
+```
+Result: **First 13 rows**
+<img width="723" height="394" alt="image" src="https://github.com/user-attachments/assets/99c1bfc1-55ba-49fd-9d27-cf79d89485d3" />
+
+
+In this query, I joined the treatments, billng and patients tables along with a selection of relevant columns.
