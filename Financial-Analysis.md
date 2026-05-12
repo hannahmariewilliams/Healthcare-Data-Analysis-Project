@@ -61,6 +61,5 @@ I queried the billing table and made a SUM of the cost of treatments but made su
 	HAVING payment_status = 'Paid'
 	ORDER BY total_spent DESC
 ```
-Result:
+Result: <img width="306" height="124" alt="image" src="https://github.com/user-attachments/assets/96a1095f-c758-43e1-ba44-578150741db8" />
 
-!!!!!!!!!!!!!!!!!Explain
