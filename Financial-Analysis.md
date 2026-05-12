@@ -1,32 +1,37 @@
 # Financial Analysis
-!!!!!!!!!!!! UPDATE TO ONLY INCLUDE PAID TREATMENTS
 
 ### Total Revenue by Treatment Type
 ```sql
-SELECT
-SUM(cost) TotalRevenue,
-treatment_type
-FROM treatments
-GROUP BY treatment_type
-Order BY TotalRevenue DESC
+SELECT 
+SUM(t.cost) TotalRevenue,
+t.treatment_type
+FROM treatments t
+INNER JOIN billing b
+ON t.treatment_id = b.treatment_id
+GROUP BY t.treatment_type, b.payment_status = 'Paid'
+HAVING b.payment_status = 'Paid'
+ORDER BY TotalRevenue DESC
 ```
 
 Result:
-<img width="276" height="178" alt="image" src="https://github.com/user-attachments/assets/5407059f-988b-428e-92e3-fd5bd40608da" />
+<img width="274" height="176" alt="image" src="https://github.com/user-attachments/assets/cadc9cef-de7d-4542-bd8b-0ac2079c6340" />
 
-For this, I selected the SUM of the cost and then grouped by treatment type. Then, I ordered by the total revenue descending.
+For this query, I joined the treatments and billing tables as I needed the treatment type and the payment status columns. I then made a sum of the treatment cost and aggregated by treatment type. After, I filtered by only 'paid' payments. Then I ordered by the treatment type with the highest revenue first.
 
 ### Average Cost Per Treatment Type
 ```sql
 SELECT
-ROUND(Avg(cost), 2) AvgCost,
-treatment_type
-FROM treatments
-GROUP BY treatment_type
+ROUND(Avg(t.cost), 2) AvgCost,
+t.treatment_type
+FROM treatments t
+INNER JOIN billing b
+ON t.treatment_id = b.treatment_id
+GROUP BY t.treatment_type, b.payment_status ='Paid'
+HAVING b.payment_status = 'Paid'
 Order BY AvgCost DESC
 ```
 Result:
-<img width="251" height="179" alt="image" src="https://github.com/user-attachments/assets/f3038b5f-cf59-4688-9855-6e681f3614e7" />
+<img width="248" height="180" alt="image" src="https://github.com/user-attachments/assets/f4c3806f-5389-497a-8cfd-5a4818ae0781" />
 
 In this case, I just updated the previous query to include the average function, so it would show the average cost per treatment type instead of SUM/total. I rounded the amount in this query as well.  
 
@@ -42,7 +47,7 @@ ORDER BY Revenue DESC
 ```
 Result: 
 
-<img width="263" height="122" alt="image" src="https://github.com/user-attachments/assets/6cd960d4-5918-4829-80bf-122fce589e53" />  
-  
+<img width="263" height="122" alt="image" src="https://github.com/user-attachments/assets/6cd960d4-5918-4829-80bf-122fce589e53" />
+
 I queried the billing table and made a SUM of the cost of treatments but made sure to filter by paid status only. I grouped by the payment method so the total revenue of treatments was organized by payment method. Lastly, it was ordered to have the highest revenue by payment method first.
 
