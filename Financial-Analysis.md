@@ -8,8 +8,8 @@ t.treatment_type
 FROM treatments t
 INNER JOIN billing b
 ON t.treatment_id = b.treatment_id
-GROUP BY t.treatment_type, b.payment_status = 'Paid'
-HAVING b.payment_status = 'Paid'
+WHERE b.payment_status = 'Paid'
+GROUP BY t.treatment_type
 ORDER BY TotalRevenue DESC
 ```
 
@@ -26,8 +26,8 @@ t.treatment_type
 FROM treatments t
 INNER JOIN billing b
 ON t.treatment_id = b.treatment_id
+WHERE b.payment_status = 'Paid'
 GROUP BY t.treatment_type, b.payment_status ='Paid'
-HAVING b.payment_status = 'Paid'
 Order BY AvgCost DESC
 ```
 Result:
