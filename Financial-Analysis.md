@@ -51,3 +51,16 @@ Result:
 
 I queried the billing table and made a SUM of the cost of treatments but made sure to filter by paid status only. I grouped by the payment method so the total revenue of treatments was organized by payment method. Lastly, it was ordered to have the highest revenue by payment method first.
 
+### High Value Patients
+```sql
+	SELECT 
+	patient_id,
+	SUM(amount) AS total_spent
+	FROM billing 
+	GROUP BY patient_id, payment_status = 'Paid'
+	HAVING payment_status = 'Paid'
+	ORDER BY total_spent DESC
+```
+Result:
+
+!!!!!!!!!!!!!!!!!Explain
