@@ -27,7 +27,7 @@ FROM treatments t
 INNER JOIN billing b
 ON t.treatment_id = b.treatment_id
 WHERE b.payment_status = 'Paid'
-GROUP BY t.treatment_type, b.payment_status ='Paid'
+GROUP BY t.treatment_type
 Order BY AvgCost DESC
 ```
 Result:
@@ -56,9 +56,9 @@ I queried the billing table and made a SUM of the cost of treatments but made su
 	SELECT 
 	patient_id,
 	SUM(amount) AS total_spent
-	FROM billing 
-	GROUP BY patient_id, payment_status = 'Paid'
-	HAVING payment_status = 'Paid'
+	FROM billing
+	WHERE payment_status = 'Paid'
+	GROUP BY patient_id
 	ORDER BY total_spent DESC
 ```
 Result: <img width="306" height="124" alt="image" src="https://github.com/user-attachments/assets/96a1095f-c758-43e1-ba44-578150741db8" />
