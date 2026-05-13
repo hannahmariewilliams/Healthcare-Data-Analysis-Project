@@ -78,6 +78,6 @@ WHERE status = 'Completed' OR status = 'Scheduled'
 GROUP BY reason_for_visit
 ORDER BY COUNT(*) DESC
 ```
-Result: Getting a check up is the most the common reason for making an appointment.
+Result: Getting a **check up** is the most the common reason for making an appointment.
 
 I counted all appointments and filtered by completed or scheduled only and grouped by the reason for visit. Lastly I wanted to display the most common reason for visit first so I used order by descending,
