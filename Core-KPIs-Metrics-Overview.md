@@ -67,7 +67,7 @@ ON p.patient_id = b.patient_id
 FULL JOIN treatments t
 ON b.treatment_id = t.treatment_id
 ```
-Result: **First 13 rows**
+Result: **First 13 rows**  
 <img width="723" height="394" alt="image" src="https://github.com/user-attachments/assets/99c1bfc1-55ba-49fd-9d27-cf79d89485d3" />
 
 
