@@ -63,7 +63,7 @@ I queried the billing table and made a SUM of the cost of treatments but made su
 Result:  
 <img width="306" height="124" alt="image" src="https://github.com/user-attachments/assets/96a1095f-c758-43e1-ba44-578150741db8" />
 
-Used the SUM function to find the total amount spent  per parient and filtered by only those who had paid (not pending or failed). Then I ordered by the highest paying patients first.
+Used the SUM function to find the total amount spent  per patient and filtered by only those who had paid (not pending or failed). Then I ordered by the highest paying patients first.
 
 ### Average Visit Cost by Doctor
 ```sql
