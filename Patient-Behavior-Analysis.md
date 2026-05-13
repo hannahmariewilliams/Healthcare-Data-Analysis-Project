@@ -11,7 +11,7 @@ GROUP BY patient_id
 HAVING COUNT(*) > 1
 ORDER BY total_appointments DESC
 ```
-Result:
+Result:  
 <img width="260" height="260" alt="image" src="https://github.com/user-attachments/assets/94833627-ab88-4e48-90e5-4aa6e3ffeaa4" />
 
 
