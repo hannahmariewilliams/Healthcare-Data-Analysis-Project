@@ -1,4 +1,4 @@
-# Key Insights and Recommendations
+# Key Insights
 
 ### Uneven Doctor Workload Distribution
 Patient assignments are not evenly distributed across providers, with some doctors handling significantly higher patient volumes than others. This suggests potential imbalances in capacity utilization, where certain providers may be underutilized while others may be operating at higher demand levels. Such disparities can impact operational efficiency and may indicate opportunities to improve scheduling or workload allocation.
@@ -15,7 +15,7 @@ X-ray treatments generate the highest total revenue among all treatment types. T
 ### MRI Has the Highest Average Treatment Cost
 MRI procedures have the highest average cost per treatment, reflecting their position as a high-value, specialized service. However, despite their high cost per unit, they do not generate the highest total revenue, implying lower utilization compared to other treatment types such as X-rays.
 
-# Business Recommendations
+# Recommendations
 
 ### Improve Doctor Workload Distribution
 
