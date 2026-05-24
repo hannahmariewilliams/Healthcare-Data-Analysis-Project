@@ -1,8 +1,5 @@
 # Key Insights
 
-### Uneven Doctor Workload Distribution
-Patient assignments are not evenly distributed across providers, with some doctors handling significantly higher patient volumes than others. This suggests potential imbalances in capacity utilization, where certain providers may be underutilized while others may be operating at higher demand levels. Such disparities can impact operational efficiency and may indicate opportunities to improve scheduling or workload allocation.
-
 ### High Appointment No-Show Rate (26%)
 Approximately 26% of scheduled appointments result in no-shows. This represents a substantial loss of clinical capacity, as nearly one in four time slots does not result in completed care. This inefficiency may contribute to lost revenue, underutilized staff time, and reduced system productivity. It also suggests potential gaps in patient engagement or appointment reminder processes.
 
@@ -14,10 +11,6 @@ X-ray treatments generate the highest total revenue among all treatment types. T
 
 
 # Recommendations
-
-### Improve Doctor Workload Distribution
-
-The uneven distribution of patients across doctors suggests a need for better workload balancing. Implementing more structured scheduling logic or load-balancing rules could help ensure providers are assigned patients more evenly. This may improve operational efficiency, reduce burnout risk among heavily assigned doctors, and increase utilization of underused staff.
 
 ### Reduce Appointment No-Show Rate
 
