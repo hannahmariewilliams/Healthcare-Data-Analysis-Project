@@ -12,8 +12,6 @@ The most common reason for patient visits is routine check-ups, indicating that 
 ### Revenue is Concentrated in X-Ray Services
 X-ray treatments generate the highest total revenue among all treatment types. This indicates that imaging services play a major role in overall financial performance.
 
-### MRI Has the Highest Average Treatment Cost
-MRI procedures have the highest average cost per treatment, reflecting their position as a high-value, specialized service. However, despite their high cost per unit, they do not generate the highest total revenue, implying lower utilization compared to other treatment types such as X-rays.
 
 # Recommendations
 
@@ -32,7 +30,3 @@ Since routine check-ups represent the most common visit reason, scheduling syste
 ### Strengthen Revenue Strategy Around High-Performing Services
 
 X-ray services generate the highest total revenue, indicating strong demand and financial importance. The organization should ensure that imaging capacity is adequately supported through staffing, equipment availability, and scheduling efficiency. Maintaining strong performance in this area is critical to sustaining overall revenue.
-
-### Evaluate MRI Utilization and Capacity Efficiency
-
-MRI services have the highest average cost per treatment but do not generate the highest total revenue, suggesting lower utilization compared to other services. The organization may benefit from reviewing MRI scheduling efficiency, referral patterns, or demand drivers to ensure high-cost equipment is being used effectively and not underutilized.
