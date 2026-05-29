@@ -1,4 +1,4 @@
-# Healthcare Exploratory Data Analysis Project
+# Healthcare Data Analysis Project
 
 ## Executive Summary:
 Using SQL, I pulled patients, doctors, and financial data from the hospital database and explored the data. As a result, I identifyied that the hospital has a high no show rate, that most scheduled appointments are check-ups and the highest grossing treatment type is X-Ray. I recommend that the hospital improves on the following:
