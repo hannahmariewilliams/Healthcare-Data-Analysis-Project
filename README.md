@@ -1,7 +1,7 @@
 # Healthcare Data Analysis Project
 
 ## Executive Summary:
-Using SQL, I pulled patients, doctors, and financial data from the hospital database and explored the data. As a result, I identifyied that the hospital has a high no show rate, that most scheduled appointments are check-ups and the highest grossing treatment type is X-Ray. I recommend that the hospital improves on the following:
+Using SQL, I pulled patients, doctors, and financial data from the hospital database and explored the data. With Power BI, I created a dashboard displaying key metrics. As a result, I identifyied that the hospital has a high no show rate, that most scheduled appointments are check-ups and the highest grossing treatment type is X-Ray. I recommend that the hospital improves on the following:
 
 1. Automated reminders and/or flexible re-scheduling
 2. Dedicated time blocks for scheduling check-ups
@@ -13,12 +13,12 @@ The hospital is experiencing operational inefficiencies that impact both revenue
 ### Methodology:
 1. SQL query to perform exploratory data analysis
    
-2. Build a dashboard in Tableau that shows the visualizes key metrics *
+2. Dashboard in Power BI that shows the visualizes key metrics.
 
 ### Skills:
 SQL: Joins, aggregate functions, CTEs
 
-Tableau: **
+Power BI: calculated columns, ETL, data visualization, writing functions, Dax, data modeling
 
 ### Results & Business Recommendation:
 The hospital is experiencing operational inefficiencies that negatively impact revenue and patient access to care. A high patient no-show rate of 26% results in underutilized appointment capacity and lost revenue opportunities. Additionally, a large share of appointments consists of routine check-ups, while X-ray services account for 28% of total revenue, indicating a misalignment between scheduling practices and revenue-driving services. Without more strategic scheduling and resource allocation, the hospital risks continued inefficiencies, reduced capacity utilization, and missed opportunities to optimize high-value services.
@@ -42,5 +42,3 @@ These adjustments directly target the highest-impact inefficiencies in the sched
 This project is organized into chapters starting with an overview of the data (i.e. Chapter 1: Core KPIs) and then goes on to evaluate different categories of the data (Chapter 2: Dcotors, Chapter 3: Patients etc.). In these sections, I provide the SQL queries I used and provide explanation of the queries. Finally, I end the project with insights derived from the analysis and recommendations to the hospital this is labeled as "Chapter 5: Final Insights and Recommendations".
 
 Data source: [Hospital Management Dataset](https://www.kaggle.com/datasets/kanakbaghel/hospital-management-dataset)
-
-** To be added. 
